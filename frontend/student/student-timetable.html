@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Timetable - Apex University Student Portal</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">Apex University - Student Portal</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Main Website</a></li>
+      <li><a href="../login.html">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Layout Container -->
+  <div class="layout">
+    <!-- Student Sidebar Navigation -->
+    <aside class="sidebar">
+      <ul class="sidebar-menu">
+        <li><a href="student-dashboard.html">Dashboard</a></li>
+        <li><a href="student-courses.html">My Courses</a></li>
+        <li><a href="student-attendance.html">Attendance</a></li>
+        <li><a href="student-grades.html">Grades & GPA</a></li>
+        <li><a href="student-timetable.html" class="active">Timetable</a></li>
+        <li><a href="student-fees.html">Fee Payment</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="content">
+      <h2 style="color: var(--primary); margin-bottom: 0.5rem;">Weekly Class Schedule</h2>
+      <p style="color: var(--text-muted); margin-bottom: 2rem;">Your personalized lecture timetable for the Spring 2026 semester.</p>
+
+      <!-- Weekly Schedule Table -->
+      <div class="card">
+        <h3>Class Timetable</h3>
+        <div class="table-responsive" style="margin-top: 1rem;">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Time Slot</th>
+                <th>Course Code & Title</th>
+                <th>Instructor</th>
+                <th>Lecture Hall</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Monday</strong></td>
+                <td>09:00 AM - 10:30 AM</td>
+                <td>CS301 - Advanced Algorithms</td>
+                <td>Dr. Alan Turing</td>
+                <td>Hall A (Block 1)</td>
+              </tr>
+              <tr>
+                <td><strong>Tuesday</strong></td>
+                <td>11:00 AM - 12:30 PM</td>
+                <td>CS305 - Database Engineering</td>
+                <td>Dr. Edgar Codd</td>
+                <td>Lab 3 (Tech Center)</td>
+              </tr>
+              <tr>
+                <td><strong>Wednesday</strong></td>
+                <td>09:00 AM - 10:30 AM</td>
+                <td>CS301 - Advanced Algorithms</td>
+                <td>Dr. Alan Turing</td>
+                <td>Hall A (Block 1)</td>
+              </tr>
+              <tr>
+                <td><strong>Thursday</strong></td>
+                <td>11:00 AM - 12:30 PM</td>
+                <td>CS305 - Database Engineering</td>
+                <td>Dr. Edgar Codd</td>
+                <td>Lab 3 (Tech Center)</td>
+              </tr>
+              <tr>
+                <td><strong>Friday</strong></td>
+                <td>02:00 PM - 03:30 PM</td>
+                <td>AI402 - Machine Learning</td>
+                <td>Prof. Geoffrey Hinton</td>
+                <td>Auditorium 2</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

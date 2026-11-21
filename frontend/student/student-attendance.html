@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance Records - Apex University Student Portal</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">Apex University - Student Portal</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Main Website</a></li>
+      <li><a href="../login.html">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Layout Container -->
+  <div class="layout">
+    <!-- Student Sidebar Navigation -->
+    <aside class="sidebar">
+      <ul class="sidebar-menu">
+        <li><a href="student-dashboard.html">Dashboard</a></li>
+        <li><a href="student-courses.html">My Courses</a></li>
+        <li><a href="student-attendance.html" class="active">Attendance</a></li>
+        <li><a href="student-grades.html">Grades & GPA</a></li>
+        <li><a href="student-timetable.html">Timetable</a></li>
+        <li><a href="student-fees.html">Fee Payment</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="content">
+      <h2 style="color: var(--primary); margin-bottom: 0.5rem;">Attendance Tracker</h2>
+      <p style="color: var(--text-muted); margin-bottom: 2rem;">Monitor your lecture attendance records across all registered semester subjects. Minimum 75% attendance is required to sit for final exams.</p>
+
+      <!-- Overall Attendance Summary Card -->
+      <div class="card" style="margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <h3 style="color: var(--primary);">Overall Semester Attendance</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Total Classes Attended: <strong>48 / 53 Sessions</strong></p>
+        </div>
+        <div style="font-size: 2rem; font-weight: bold; color: var(--success);">91%</div>
+      </div>
+
+      <!-- Attendance Breakdown Table -->
+      <div class="card">
+        <h3>Course-wise Attendance Summary</h3>
+        <div class="table-responsive" style="margin-top: 1rem;">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Course Code</th>
+                <th>Course Title</th>
+                <th>Total Classes</th>
+                <th>Attended</th>
+                <th>Percentage</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>CS301</strong></td>
+                <td>Advanced Algorithms</td>
+                <td>14</td>
+                <td>13</td>
+                <td>92.8%</td>
+                <td><span class="badge badge-success">Good</span></td>
+              </tr>
+              <tr>
+                <td><strong>CS305</strong></td>
+                <td>Database Engineering</td>
+                <td>12</td>
+                <td>11</td>
+                <td>91.6%</td>
+                <td><span class="badge badge-success">Good</span></td>
+              </tr>
+              <tr>
+                <td><strong>AI402</strong></td>
+                <td>Machine Learning Fundamentals</td>
+                <td>15</td>
+                <td>13</td>
+                <td>86.6%</td>
+                <td><span class="badge badge-success">Good</span></td>
+              </tr>
+              <tr>
+                <td><strong>SE310</strong></td>
+                <td>Software Architecture & Design</td>
+                <td>12</td>
+                <td>11</td>
+                <td>91.6%</td>
+                <td><span class="badge badge-success">Good</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

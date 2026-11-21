@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard - Apex University</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">Apex University - Student Portal</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Main Website</a></li>
+      <li><a href="../login.html">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Layout Container -->
+  <div class="layout">
+    <!-- Student Sidebar Navigation -->
+    <aside class="sidebar">
+      <ul class="sidebar-menu">
+        <li><a href="student-dashboard.html" class="active">Dashboard</a></li>
+        <li><a href="student-courses.html">My Courses</a></li>
+        <li><a href="student-attendance.html">Attendance</a></li>
+        <li><a href="student-grades.html">Grades & GPA</a></li>
+        <li><a href="student-timetable.html">Timetable</a></li>
+        <li><a href="student-fees.html">Fee Payment</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="content">
+      <!-- Profile Welcome Card -->
+      <div class="card" style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <h2 style="color: var(--primary);">Welcome Back, Alex Johnson</h2>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">Student ID: <strong>STU101</strong> | Department: <strong>Computer Science</strong> | Academic Year: <strong>Year 3</strong></p>
+        </div>
+        <span class="badge badge-success" style="font-size: 0.9rem; padding: 0.5rem 1rem;">Status: Active</span>
+      </div>
+
+      <!-- Quick KPI Stats -->
+      <div class="grid">
+        <div class="card stat-card">
+          <h4>Enrolled Courses</h4>
+          <div class="value">4</div>
+        </div>
+        <div class="card stat-card">
+          <h4>Overall Attendance</h4>
+          <div class="value" style="color: var(--success);">91%</div>
+        </div>
+        <div class="card stat-card">
+          <h4>Cumulative GPA</h4>
+          <div class="value">3.84</div>
+        </div>
+        <div class="card stat-card">
+          <h4>Tuition Status</h4>
+          <div class="value" style="font-size: 1.5rem; color: var(--success); margin-top: 0.8rem;">Paid in Full</div>
+        </div>
+      </div>
+
+      <!-- Registered Courses Summary -->
+      <h3 style="margin-bottom: 1rem; color: var(--primary);">Current Enrolled Courses</h3>
+      <div class="grid">
+        <div class="card">
+          <h4>CS301: Advanced Algorithms</h4>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0.4rem 0;">Instructor: Dr. Alan Turing</p>
+          <p style="color: var(--text-muted); font-size: 0.85rem;">Schedule: Mon / Wed (09:00 AM)</p>
+          <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+            <span class="badge badge-success">4 Credits</span>
+            <a href="student-courses.html" style="color: var(--accent); font-weight: 600; font-size: 0.85rem;">View Details &rarr;</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h4>CS305: Database Engineering</h4>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0.4rem 0;">Instructor: Dr. Edgar Codd</p>
+          <p style="color: var(--text-muted); font-size: 0.85rem;">Schedule: Tue / Thu (11:00 AM)</p>
+          <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+            <span class="badge badge-success">3 Credits</span>
+            <a href="student-courses.html" style="color: var(--accent); font-weight: 600; font-size: 0.85rem;">View Details &rarr;</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h4>AI402: Machine Learning</h4>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0.4rem 0;">Instructor: Prof. Geoffrey Hinton</p>
+          <p style="color: var(--text-muted); font-size: 0.85rem;">Schedule: Fri (02:00 PM)</p>
+          <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+            <span class="badge badge-success">4 Credits</span>
+            <a href="student-courses.html" style="color: var(--accent); font-weight: 600; font-size: 0.85rem;">View Details &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

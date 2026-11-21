@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Courses - Apex University Admin</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">Apex University - Admin Portal</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Main Website</a></li>
+      <li><a href="../login.html">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Layout Container -->
+  <div class="layout">
+    <!-- Admin Sidebar Navigation -->
+    <aside class="sidebar">
+      <ul class="sidebar-menu">
+        <li><a href="admin-dashboard.html">Dashboard</a></li>
+        <li><a href="manage-students.html">Manage Students</a></li>
+        <li><a href="manage-faculty.html">Manage Faculty</a></li>
+        <li><a href="manage-courses.html" class="active">Manage Courses</a></li>
+        <li><a href="timetable-builder.html">Timetable Builder</a></li>
+        <li><a href="audit-logs.html">Audit Logs</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="content">
+      <h2 style="color: var(--primary); margin-bottom: 0.5rem;">Course Catalog Management</h2>
+      <p style="color: var(--text-muted); margin-bottom: 2rem;">Add new academic courses, assign credit hours, and configure department programs.</p>
+
+      <!-- Add Course Form Card -->
+      <div class="card" style="margin-bottom: 2rem;">
+        <h3>Add New Course</h3>
+        <form id="add-course-form" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1rem;">
+          <div class="form-group">
+            <label>Course Code</label>
+            <input type="text" id="crs-code" class="form-control" placeholder="CS301" required>
+          </div>
+          <div class="form-group">
+            <label>Course Title</label>
+            <input type="text" id="crs-title" class="form-control" placeholder="Advanced Algorithms" required>
+          </div>
+          <div class="form-group">
+            <label>Department</label>
+            <select id="crs-dept" class="form-control">
+              <option>Computer Science</option>
+              <option>Data Science</option>
+              <option>Electronics</option>
+              <option>Mechanical Engineering</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Credit Hours</label>
+            <select id="crs-credits" class="form-control">
+              <option>3 Credits</option>
+              <option>4 Credits</option>
+              <option>2 Credits</option>
+              <option>1 Credit</option>
+            </select>
+          </div>
+          <div class="form-group" style="grid-column: 1 / -1; display: flex; justify-content: flex-end;">
+            <button type="submit" class="btn btn-primary">Save Course Record</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Courses Table -->
+      <div class="card">
+        <h3>Active Course Directory</h3>
+        <div class="table-responsive" style="margin-top: 1rem;">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Code</th>
+                <th>Course Title</th>
+                <th>Department</th>
+                <th>Credits</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="course-table-body">
+              <tr>
+                <td><strong>CS301</strong></td>
+                <td>Advanced Algorithms</td>
+                <td>Computer Science</td>
+                <td>4 Credits</td>
+                <td><button class="btn btn-danger" style="padding: 0.25rem 0.5rem; font-size: 0.8rem;">Remove</button></td>
+              </tr>
+              <tr>
+                <td><strong>CS305</strong></td>
+                <td>Database Engineering</td>
+                <td>Computer Science</td>
+                <td>3 Credits</td>
+                <td><button class="btn btn-danger" style="padding: 0.25rem 0.5rem; font-size: 0.8rem;">Remove</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script>
+    document.getElementById('add-course-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const code = document.getElementById('crs-code').value.toUpperCase();
+      const title = document.getElementById('crs-title').value;
+      const dept = document.getElementById('crs-dept').value;
+      const credits = document.getElementById('crs-credits').value;
+      
+      const tbody = document.getElementById('course-table-body');
+      const newRow = document.createElement('tr');
+      
+      newRow.innerHTML = `
+        <td><strong>${code}</strong></td>
+        <td>${title}</td>
+        <td>${dept}</td>
+        <td>${credits}</td>
+        <td><button class="btn btn-danger" style="padding: 0.25rem 0.5rem; font-size: 0.8rem;" onclick="this.closest('tr').remove()">Remove</button></td>
+      `;
+      tbody.appendChild(newRow);
+      this.reset();
+      alert('Course added successfully!');
+    });
+  </script>
+</body>
+</html>

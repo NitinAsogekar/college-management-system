@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Courses - Apex University Student Portal</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">Apex University - Student Portal</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Main Website</a></li>
+      <li><a href="../login.html">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Layout Container -->
+  <div class="layout">
+    <!-- Student Sidebar Navigation -->
+    <aside class="sidebar">
+      <ul class="sidebar-menu">
+        <li><a href="student-dashboard.html">Dashboard</a></li>
+        <li><a href="student-courses.html" class="active">My Courses</a></li>
+        <li><a href="student-attendance.html">Attendance</a></li>
+        <li><a href="student-grades.html">Grades & GPA</a></li>
+        <li><a href="student-timetable.html">Timetable</a></li>
+        <li><a href="student-fees.html">Fee Payment</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="content">
+      <h2 style="color: var(--primary); margin-bottom: 0.5rem;">Registered Semester Courses</h2>
+      <p style="color: var(--text-muted); margin-bottom: 2rem;">Overview of your enrolled subjects, faculty instructors, and credit allocation for Spring 2026.</p>
+
+      <!-- Courses Table -->
+      <div class="card">
+        <h3>Enrolled Course Catalog</h3>
+        <div class="table-responsive" style="margin-top: 1rem;">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Course Code</th>
+                <th>Course Title</th>
+                <th>Department</th>
+                <th>Instructor</th>
+                <th>Credits</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>CS301</strong></td>
+                <td>Advanced Algorithms</td>
+                <td>Computer Science</td>
+                <td>Dr. Alan Turing</td>
+                <td>4 Credits</td>
+                <td><span class="badge badge-success">Enrolled</span></td>
+              </tr>
+              <tr>
+                <td><strong>CS305</strong></td>
+                <td>Database Engineering</td>
+                <td>Computer Science</td>
+                <td>Dr. Edgar Codd</td>
+                <td>3 Credits</td>
+                <td><span class="badge badge-success">Enrolled</span></td>
+              </tr>
+              <tr>
+                <td><strong>AI402</strong></td>
+                <td>Machine Learning Fundamentals</td>
+                <td>Computer Science</td>
+                <td>Prof. Geoffrey Hinton</td>
+                <td>4 Credits</td>
+                <td><span class="badge badge-success">Enrolled</span></td>
+              </tr>
+              <tr>
+                <td><strong>SE310</strong></td>
+                <td>Software Architecture & Design</td>
+                <td>Computer Science</td>
+                <td>Dr. Margaret Hamilton</td>
+                <td>3 Credits</td>
+                <td><span class="badge badge-success">Enrolled</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Total Credits Summary Card -->
+      <div class="card" style="margin-top: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <h4 style="color: var(--primary);">Total Semester Credit Load</h4>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Maximum permitted load per semester is 18 credits.</p>
+        </div>
+        <div style="font-size: 1.5rem; font-weight: bold; color: var(--primary);">14 Credits</div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

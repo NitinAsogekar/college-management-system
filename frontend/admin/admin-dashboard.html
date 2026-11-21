@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Apex University</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">Apex University - Admin Portal</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Main Website</a></li>
+      <li><a href="../login.html">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Layout Container -->
+  <div class="layout">
+    <!-- Admin Sidebar Navigation -->
+    <aside class="sidebar">
+      <ul class="sidebar-menu">
+        <li><a href="admin-dashboard.html" class="active">Dashboard</a></li>
+        <li><a href="manage-students.html">Manage Students</a></li>
+        <li><a href="manage-faculty.html">Manage Faculty</a></li>
+        <li><a href="manage-courses.html">Manage Courses</a></li>
+        <li><a href="timetable-builder.html">Timetable Builder</a></li>
+        <li><a href="audit-logs.html">Audit Logs</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="content">
+      <h2 style="color: var(--primary); margin-bottom: 0.5rem;">Administrative Overview</h2>
+      <p style="color: var(--text-muted); margin-bottom: 2rem;">Welcome back, Administrator. Here is a summary of current campus operations.</p>
+
+      <!-- KPI Summary Cards Grid -->
+      <div class="grid">
+        <div class="card stat-card">
+          <h4>Total Students</h4>
+          <div class="value">1,420</div>
+        </div>
+        <div class="card stat-card">
+          <h4>Active Faculty</h4>
+          <div class="value">84</div>
+        </div>
+        <div class="card stat-card">
+          <h4>Active Courses</h4>
+          <div class="value">38</div>
+        </div>
+        <div class="card stat-card">
+          <h4>Fee Collection</h4>
+          <div class="value">92%</div>
+        </div>
+      </div>
+
+      <!-- Quick Action Panels -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+        <div class="card">
+          <h3>Quick Student Registration</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0.5rem 0 1rem 0;">Directly enroll a new student into the university database.</p>
+          <a href="manage-students.html" class="btn btn-primary" style="display: inline-block; text-align: center;">Go to Students Module</a>
+        </div>
+
+        <div class="card">
+          <h3>Schedule & Timetable</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0.5rem 0 1rem 0;">Assign lecture halls, time slots, and professors for upcoming classes.</p>
+          <a href="timetable-builder.html" class="btn btn-primary" style="display: inline-block; text-align: center; background: var(--secondary);">Open Timetable Builder</a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

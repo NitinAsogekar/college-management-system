@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notice Board - Apex University</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+  <!-- Top Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">Apex University</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="notice-board.html" class="active">Notice Board</a></li>
+      <li><a href="login.html" class="btn btn-primary" style="padding: 0.4rem 1rem; color: white;">Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- Notice Board Container -->
+  <div class="content" style="max-width: 900px; margin: 0 auto; padding: 3rem 1rem; flex: 1; width: 100%;">
+    <h1 style="color: var(--primary); margin-bottom: 0.5rem;">University Notice Board</h1>
+    <p style="color: var(--text-muted); margin-bottom: 2rem;">Official announcements, circulars, and scheduling updates for the academic year.</p>
+
+    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+      <!-- Notice Item 1 -->
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+          <h3 style="color: var(--primary);">End-Semester Examination Schedule (Spring 2026)</h3>
+          <span class="badge badge-warning">Important</span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+          The spring semester final examinations will commence starting May 12, 2026. Hall tickets can be downloaded from respective student portals starting next week. Please clear all pending tuition balances to avoid admit card withholding.
+        </p>
+        <div style="font-size: 0.85rem; color: var(--text-muted);">Published on: October 24, 2026 | Office of the Registrar</div>
+      </div>
+
+      <!-- Notice Item 2 -->
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+          <h3 style="color: var(--primary);">Annual Tech Symposium & Hackathon 2026</h3>
+          <span class="badge badge-success">Event</span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+          Registrations are now open for ApexHacks 2026. Students from all departments are encouraged to form teams of 2 to 4 members and register via the student portal under extracurricular activities.
+        </p>
+        <div style="font-size: 0.85rem; color: var(--text-muted);">Published on: October 20, 2026 | Department of Computer Science</div>
+      </div>
+
+      <!-- Notice Item 3 -->
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+          <h3 style="color: var(--primary);">Library Timing Extensions During Mid-Terms</h3>
+          <span class="badge badge-success">General</span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+          To support student preparation, the central library reading rooms will remain open until midnight (12:00 AM) throughout the mid-term examination period.
+        </p>
+        <div style="font-size: 0.85rem; color: var(--text-muted);">Published on: October 15, 2026 | Library Services</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fee Payment - Apex University Student Portal</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">Apex University - Student Portal</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Main Website</a></li>
+      <li><a href="../login.html">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Layout Container -->
+  <div class="layout">
+    <!-- Student Sidebar Navigation -->
+    <aside class="sidebar">
+      <ul class="sidebar-menu">
+        <li><a href="student-dashboard.html">Dashboard</a></li>
+        <li><a href="student-courses.html">My Courses</a></li>
+        <li><a href="student-attendance.html">Attendance</a></li>
+        <li><a href="student-grades.html">Grades & GPA</a></li>
+        <li><a href="student-timetable.html">Timetable</a></li>
+        <li><a href="student-fees.html" class="active">Fee Payment</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="content">
+      <h2 style="color: var(--primary); margin-bottom: 0.5rem;">Tuition & Fee Ledger</h2>
+      <p style="color: var(--text-muted); margin-bottom: 2rem;">Review your semester fee breakdown, payment receipts, and outstanding balances.</p>
+
+      <!-- Fee Status Overview Card -->
+      <div class="card" style="margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <h3 style="color: var(--primary);">Spring 2026 Financial Standing</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Current Outstanding Balance: <strong style="color: var(--success);">$0.00</strong></p>
+        </div>
+        <span class="badge badge-success" style="font-size: 1rem; padding: 0.5rem 1rem;">Paid in Full</span>
+      </div>
+
+      <!-- Fee Breakdown Table -->
+      <div class="card" style="margin-bottom: 2rem;">
+        <h3>Fee Component Breakdown</h3>
+        <div class="table-responsive" style="margin-top: 1rem;">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Particulars</th>
+                <th>Category</th>
+                <th>Amount</th>
+                <th>Due Date</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Tuition Fee (14 Credits)</strong></td>
+                <td>Academic</td>
+                <td>$4,500.00</td>
+                <td>2026-01-15</td>
+                <td><span class="badge badge-success">Paid</span></td>
+              </tr>
+              <tr>
+                <td><strong>Laboratory & Tech Fee</strong></td>
+                <td>Facility</td>
+                <td>$650.00</td>
+                <td>2026-01-15</td>
+                <td><span class="badge badge-success">Paid</span></td>
+              </tr>
+              <tr>
+                <td><strong>Library & Digital Access</strong></td>
+                <td>Services</td>
+                <td>$200.00</td>
+                <td>2026-01-15</td>
+                <td><span class="badge badge-success">Paid</span></td>
+              </tr>
+              <tr>
+                <td><strong>Student Activity & Events</strong></td>
+                <td>Campus Life</td>
+                <td>$150.00</td>
+                <td>2026-01-15</td>
+                <td><span class="badge badge-success">Paid</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Payment Simulation Card -->
+      <div class="card">
+        <h3>Make an Advance Payment / Deposit</h3>
+        <form id="fee-payment-form" style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-top: 1rem;">
+          <div class="form-group" style="flex: 1; min-width: 220px; margin-bottom: 0;">
+            <label>Payment Amount ($)</label>
+            <input type="number" id="pay-amount" class="form-control" placeholder="100.00" min="1" required>
+          </div>
+          <div class="form-group" style="flex: 1; min-width: 220px; margin-bottom: 0;">
+            <label>Payment Method</label>
+            <select class="form-control">
+              <option>Credit / Debit Card</option>
+              <option>University NetBanking</option>
+              <option>Campus Wallet</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary" style="align-self: flex-end; padding: 0.75rem 1.5rem;">Proceed to Pay</button>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script>
+    document.getElementById('fee-payment-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const amount = document.getElementById('pay-amount').value;
+      alert(`Successfully processed payment of $${amount}. Receipt has been emailed to your university account.`);
+      this.reset();
+    });
+  </script>
+</body>
+</html>

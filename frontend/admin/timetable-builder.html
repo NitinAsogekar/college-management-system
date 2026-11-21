@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timetable Builder - Apex University Admin</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">Apex University - Admin Portal</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Main Website</a></li>
+      <li><a href="../login.html">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Layout Container -->
+  <div class="layout">
+    <!-- Admin Sidebar Navigation -->
+    <aside class="sidebar">
+      <ul class="sidebar-menu">
+        <li><a href="admin-dashboard.html">Dashboard</a></li>
+        <li><a href="manage-students.html">Manage Students</a></li>
+        <li><a href="manage-faculty.html">Manage Faculty</a></li>
+        <li><a href="manage-courses.html">Manage Courses</a></li>
+        <li><a href="timetable-builder.html" class="active">Timetable Builder</a></li>
+        <li><a href="audit-logs.html">Audit Logs</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="content">
+      <h2 style="color: var(--primary); margin-bottom: 0.5rem;">Class Timetable Builder</h2>
+      <p style="color: var(--text-muted); margin-bottom: 2rem;">Assign lecture halls, time slots, and professors for semester schedules.</p>
+
+      <!-- Add Timetable Entry Card -->
+      <div class="card" style="margin-bottom: 2rem;">
+        <h3>Schedule New Lecture Slot</h3>
+        <form id="timetable-form" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1rem;">
+          <div class="form-group">
+            <label>Course</label>
+            <select id="tt-course" class="form-control">
+              <option>CS301 - Advanced Algorithms</option>
+              <option>CS305 - Database Engineering</option>
+              <option>AI402 - Machine Learning</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Day of Week</label>
+            <select id="tt-day" class="form-control">
+              <option>Monday</option>
+              <option>Tuesday</option>
+              <option>Wednesday</option>
+              <option>Thursday</option>
+              <option>Friday</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Time Slot</label>
+            <select id="tt-time" class="form-control">
+              <option>09:00 AM - 10:30 AM</option>
+              <option>11:00 AM - 12:30 PM</option>
+              <option>02:00 PM - 03:30 PM</option>
+              <option>04:00 PM - 05:30 PM</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Lecture Hall</label>
+            <select id="tt-room" class="form-control">
+              <option>Hall A (Block 1)</option>
+              <option>Hall B (Block 1)</option>
+              <option>Lab 3 (Tech Center)</option>
+              <option>Auditorium 2</option>
+            </select>
+          </div>
+          <div class="form-group" style="grid-column: 1 / -1; display: flex; justify-content: flex-end;">
+            <button type="submit" class="btn btn-primary">Publish Schedule Entry</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Timetable Entries Table -->
+      <div class="card">
+        <h3>Active Class Schedule</h3>
+        <div class="table-responsive" style="margin-top: 1rem;">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Time Slot</th>
+                <th>Course</th>
+                <th>Location</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="timetable-table-body">
+              <tr>
+                <td><strong>Monday</strong></td>
+                <td>09:00 AM - 10:30 AM</td>
+                <td>CS301 - Advanced Algorithms</td>
+                <td>Hall A (Block 1)</td>
+                <td><button class="btn btn-danger" style="padding: 0.25rem 0.5rem; font-size: 0.8rem;" onclick="this.closest('tr').remove()">Remove</button></td>
+              </tr>
+              <tr>
+                <td><strong>Wednesday</strong></td>
+                <td>11:00 AM - 12:30 PM</td>
+                <td>CS305 - Database Engineering</td>
+                <td>Lab 3 (Tech Center)</td>
+                <td><button class="btn btn-danger" style="padding: 0.25rem 0.5rem; font-size: 0.8rem;" onclick="this.closest('tr').remove()">Remove</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script>
+    document.getElementById('timetable-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const course = document.getElementById('tt-course').value;
+      const day = document.getElementById('tt-day').value;
+      const time = document.getElementById('tt-time').value;
+      const room = document.getElementById('tt-room').value;
+      
+      const tbody = document.getElementById('timetable-table-body');
+      const newRow = document.createElement('tr');
+      
+      newRow.innerHTML = `
+        <td><strong>${day}</strong></td>
+        <td>${time}</td>
+        <td>${course}</td>
+        <td>${room}</td>
+        <td><button class="btn btn-danger" style="padding: 0.25rem 0.5rem; font-size: 0.8rem;" onclick="this.closest('tr').remove()">Remove</button></td>
+      `;
+      tbody.appendChild(newRow);
+      this.reset();
+      alert('Timetable slot scheduled successfully!');
+    });
+  </script>
+</body>
+</html>
